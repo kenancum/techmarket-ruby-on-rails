@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="jumbotron">
+  <h1 class="display-4">
+    <%= @laptop.brand %>   <%= @laptop.model %>  
+  </h1>
+  <p class="lead">     
+    <%= @laptop.price %>  PLN
+  </p>
+</div>
+<br/>
+<div>
+  <%= link_to "Edit this laptop", edit_laptop_path(@laptop), class: "btn btn-secondary" %>  
+  <%= link_to "Back to laptops", laptops_path, class: "btn btn-secondary" %>
+  <br/>
+  <br/>
+  <%= button_to "Destroy this laptop", @laptop, method: :delete, class: "btn btn-danger"  %>
+</div>

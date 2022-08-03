@@ -1,0 +1,19 @@
+<tr id="<%= dom_id laptop %>" class="align-middle">
+  <td>
+    <%= laptop.brand %>
+  </td>
+
+  <td>
+    <%= laptop.model %>
+  </td>
+
+  <td>
+    <%= laptop.price %>
+  </td>
+  
+  <td>
+    <div class="col-md-12 text-center">
+      <%= link_to "Show", laptop, method: :get, class: 'btn btn-info text-white '%>
+    </div>
+  </td>
+</tr>

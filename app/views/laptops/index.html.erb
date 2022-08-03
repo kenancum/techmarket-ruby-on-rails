@@ -1,0 +1,31 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h1>Laptops</h1>
+    </div>
+    <div class="col-sm d-flex flex-row-reverse p-2">
+      <%= link_to "New laptop", new_laptop_path, method: :get, class: 'btn btn-info text-white'%>
+    </div>
+  </div>
+</div>
+<br/>
+<div id="laptops">
+  <table class="table table-striped-columns table-bordered table-hover">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">Brand</th>
+        <th scope="col">Model</th>
+        <th scope="col">Price</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @laptops.each do |laptop| %>
+        <%= render laptop %>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
